@@ -30,7 +30,12 @@ function App() {
   return (
     <div>
       <center>
-        <input id="input" type="text" onChange={handleInput}></input>
+        <input
+          id="input"
+          type="text"
+          onChange={handleInput}
+          placeholder="enter pokemon name"
+        ></input>
         <br />
         <button id="search-btn" onClick={handleSearch}>
           Click
@@ -47,6 +52,10 @@ function App() {
           <tr>
             <td>Name</td>
             <td>{data?.name}</td>
+          </tr>
+          <tr>
+            <td>Base-experience</td>
+            <td>{data?.base_experience}</td>
           </tr>
           <tr>
             <td>Weight</td>
