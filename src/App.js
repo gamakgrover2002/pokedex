@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import "./App.css";
 import { useState } from "react";
+import { useEffect } from "react";
 function App() {
   const [pokemon, Setpokemon] = useState({});
   const [data, Setdata] = useState("");
@@ -26,6 +27,10 @@ function App() {
   const handleInput = (e) => {
     Setpokemon(e.target.value);
   };
+
+  useEffect(() => {
+    getData("pikachu");
+  }, []);
 
   return (
     <div>
