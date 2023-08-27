@@ -43,7 +43,7 @@ function App() {
         ></input>
         <br />
         <button id="search-btn" onClick={handleSearch}>
-          Click
+          Search
         </button>
         <br />
         <br />
