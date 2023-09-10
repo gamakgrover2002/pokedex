@@ -1,4 +1,3 @@
-import axios from "axios";
 import React from "react";
 import "./App.css";
 import { useState } from "react";
@@ -7,18 +6,13 @@ function App() {
   const [pokemon, Setpokemon] = useState({});
   const [data, Setdata] = useState("");
 
-  const getData = (pokemon) => {
+  const getData = async (pokemon) => {
     if (!pokemon) return;
     const URL = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
-    axios
-      .get(URL)
-      .then((res) => {
-        Setdata(res.data);
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log("err", err);
-      });
+    const res = await fetch(URL);
+    const dat = await res.json();
+
+    Setdata(dat);
   };
   const handleSearch = () => {
     getData(pokemon);
@@ -69,6 +63,13 @@ function App() {
           <tr>
             <td>Height</td>
             <td>{data?.height / 10}m</td>
+          </tr>
+          <tr>
+            <td>Shiny-form</td>
+            <td>
+              {" "}
+              <img src={data?.sprites?.front_shiny} alt="img" />
+            </td>
           </tr>
         </table>
       </center>
