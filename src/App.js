@@ -11,7 +11,7 @@ function App() {
     const URL = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
     const res = await fetch(URL);
     const dat = await res.json();
-
+    console.log(dat);
     Setdata(dat);
   };
   const handleSearch = () => {
@@ -64,10 +64,16 @@ function App() {
             <td>Height</td>
             <td>{data?.height / 10}m</td>
           </tr>
+          {data?.stats?.map((e) => (
+            <tr>
+              <td>{e.stat.name}</td>
+              <td> {e.base_stat}</td>
+            </tr>
+          ))}
+
           <tr>
             <td>Shiny-form</td>
             <td>
-              {" "}
               <img src={data?.sprites?.front_shiny} alt="img" />
             </td>
           </tr>
