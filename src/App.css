@@ -4,15 +4,27 @@
 }
 
 #input {
-  width: 300px;
-  height: 30px;
-  font-size: larger;
-  margin-top: 100px;
+  width: 30vw;
+  height: 10vh;
+  font-size: 1em;
+  margin-top: 10vh;
+  outline: none;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: red;
+}
+#input:focus {
+  box-shadow:
+    2px 2px 5px 5px yellow,
+    3px 3px 6px 6px red,
+    -2px -2px 5px 5px yellow,
+    -3px -3px 6px 6px red;
 }
 #search-btn {
-  margin-top: 30px;
-  width: 300px;
-  height: 50px;
+  margin-top: 5vh;
+  width: 30vw;
+  height: 10vh;
   outline: none;
   border: none;
   background: linear-gradient(90deg, red, yellow);
@@ -28,15 +40,16 @@
     filter: hue-rotate(180deg);
   }
 }
-#table {
-  margin-top: 200px;
+table {
+  margin-top: 10vh;
+  width: 30vw;
 }
 body {
   background-color: lightgreen;
 }
 img {
-  width: 200px;
-  height: 200px;
+  width: 20vw;
+  height: 20vh;
 }
 tr {
   background-color: darkgreen;
@@ -45,4 +58,83 @@ tr {
 }
 table {
   border: solid 5px black;
+}
+#poke-container {
+  display: flex;
+}
+h1 {
+  padding-top: 2vh;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  text-align: center;
+  font-size: 70px;
+}
+#list {
+  color: black;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+#list:hover {
+  color: red;
+}
+#navbar {
+  list-style: none;
+  gap: 3vw;
+  font-size: 2em;
+  display: flex;
+  width: 80vw;
+  height: 10vh;
+}
+#navs {
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+}
+#navs:hover {
+  color: yellow;
+  text-shadow: -2px -2px 2px red;
+}
+#demo {
+  background-image: radial-gradient(white 60%, yellow 30%, yellow);
+  width: 10vw;
+  height: 17vh;
+  border-radius: 60%;
+  animation: mymove 8s infinite;
+  border: solid 5px red;
+  text-shadow: 1px 1px #ff0000;
+}
+
+#demo p {
+  padding-top: 5vh;
+  font-size: medium;
+
+  color: yellow;
+  font-weight: bold;
+}
+#links {
+  display: flex;
+  gap: 4vw;
+  padding-left: 20vw;
+}
+@keyframes mymove {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+#search-container {
+  padding-left: 30vw;
+}
+#image {
+  width: 20vw;
+  height: 60vh;
+}
+#profile {
+  font-size: larger;
+  width: 40vw;
 }
