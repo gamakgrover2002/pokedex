@@ -39,7 +39,11 @@ function Search() {
       <br />
       <br />
 
-      <img src={data?.sprites?.other?.dream_world?.front_default} alt="img" />
+      <img
+        src={data?.sprites?.other?.dream_world?.front_default}
+        alt="img"
+        id="poke-img"
+      />
       <table>
         <tr>
           <td>ID</td>

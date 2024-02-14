@@ -6,20 +6,19 @@
 #input {
   width: 30vw;
   height: 10vh;
-  font-size: 1em;
+  font-size: 2em;
   margin-top: 10vh;
   outline: none;
   border: none;
   text-align: center;
   text-transform: uppercase;
-  color: red;
+  color: black;
+  font-weight: 700;
 }
 #input:focus {
   box-shadow:
-    2px 2px 5px 5px yellow,
-    3px 3px 6px 6px red,
-    -2px -2px 5px 5px yellow,
-    -3px -3px 6px 6px red;
+    inset 5px 5px 10px black,
+    inset -5px -5px 10px black;
 }
 #search-btn {
   margin-top: 5vh;
@@ -53,14 +52,20 @@ img {
 }
 tr {
   background-color: darkgreen;
-  color: yellow;
+  color: white;
   text-align: center;
 }
 table {
   border: solid 5px black;
 }
 #poke-container {
+  margin-left: 30vw;
   display: flex;
+  margin-top: 5vh;
+  border: 1px solid black;
+  width: 30vw;
+  height: 50vh;
+  padding: 2vw 2vh;
 }
 h1 {
   padding-top: 2vh;
@@ -70,13 +75,18 @@ h1 {
   font-size: 70px;
 }
 #list {
+  text-align: center;
   color: black;
   text-decoration: underline;
   text-transform: capitalize;
+  border: 1px solid black;
+  font-weight: bold;
 }
 #list:hover {
   color: red;
+  background-color: white;
 }
+
 #navbar {
   list-style: none;
   gap: 3vw;
@@ -91,16 +101,14 @@ h1 {
   font-size: 2em;
 }
 #navs:hover {
-  color: yellow;
-  text-shadow: -2px -2px 2px red;
+  color: #000000;
 }
 #demo {
-  background-image: radial-gradient(white 60%, yellow 30%, yellow);
   width: 10vw;
   height: 17vh;
   border-radius: 60%;
   animation: mymove 8s infinite;
-  border: solid 5px red;
+  border: solid 3px yellow;
   text-shadow: 1px 1px #ff0000;
 }
 
@@ -137,4 +145,19 @@ h1 {
 #profile {
   font-size: larger;
   width: 40vw;
+}
+#poke-img {
+  margin-left: 7vw;
+}
+#image {
+  width: 20vw;
+  height: 20vh;
+  aspect-ratio: 3/2;
+}
+#profile {
+  padding: 3px;
+}
+#poke-list {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }

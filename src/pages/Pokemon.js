@@ -38,6 +38,7 @@ function Pokemon() {
               <li>{e.type.name}</li>
             ))}
           </ol>
+          <ol></ol>
         </div>
       </div>
     </>

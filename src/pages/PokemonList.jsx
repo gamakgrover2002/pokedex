@@ -15,16 +15,16 @@ function PokemonList() {
     getData();
   }, []);
   return (
-    <div>
+    <>
       <h1>PokemonList</h1>
-      <center>
+      <div id="poke-list">
         {List.map((e) => (
           <Link to={`pokemons/${e.name}`}>
-            <li id="list"> {e.name} </li>
+            <div id="list">{e.name}</div>
           </Link>
         ))}
-      </center>
-    </div>
+      </div>
+    </>
   );
 }
 
